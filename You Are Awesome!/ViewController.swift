@@ -26,44 +26,18 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    @IBAction func showMessagePressed(_ sender: UIButton) {
-
-        let messages = ["You Are Awesome!",
-                        "You are Great!",
-                        "You are Fantastic!",
-                        "When the Genius Bar needs help, they call you.",
-                        "You brighten my day!",
-                        "You make me smile!",
-                        "You are da bomb.",
-                        "Hey, Fabulous!",
-                        "Hey, Girl ;)",
-                        "I really like to eat cheese. It's the greatest food every invented."]
-        
+    
+    func nonRepeatingRandom(lastNumber: Int, maxValue: Int) -> Int{
         var newIndex: Int
-        
-        //SHOW MESSAGE:
         repeat{
-            newIndex = Int.random(in: 0..<messages.count)
-        } while index == newIndex
-        
-        index = newIndex
-        messageLabel.text = messages[index]
-        
-        //SHOW IMAGE:
-        repeat {
-            newIndex = Int.random(in: 0..<numberOfImages)
-        } while imageIndex == newIndex
-        
-        imageIndex = newIndex
-        awesomeImageView.image = UIImage(named: "image\(imageIndex)")
-        
+            newIndex = Int.random(in: 0..<maxValue)
+        } while lastNumber == newIndex
+        return newIndex
+    }
+    
+    
+    func playSound(soundName: String){
         //PLAY SOUND:
-        repeat {
-            newIndex = Int.random(in: 0..<numberOfSounds)
-        } while soundIndex == newIndex
-        
-        soundIndex = newIndex
-        
         var soundName = "sound\(soundIndex)"
         
         //Can we load in the file soundName?
@@ -78,6 +52,40 @@ class ViewController: UIViewController {
             print("ERROR: file \(soundName) didn't load.")
         }
     }
+    
+    
+    
+    
+    @IBAction func showMessagePressed(_ sender: UIButton) {
+
+        let messages = ["You Are Awesome!",
+                        "You are Great!",
+                        "You are Fantastic!",
+                        "When the Genius Bar needs help, they call you.",
+                        "You brighten my day!",
+                        "You make me smile!",
+                        "You are da bomb.",
+                        "Hey, Fabulous!",
+                        "Hey, Girl ;)",
+                        "I really like to eat cheese. It's the greatest food every invented."]
+        
+        
+        
+        //SHOW MESSAGE:
+        index = nonRepeatingRandom(lastNumber: index, maxValue: messages.count)
+        messageLabel.text = messages[index]
+        
+        //SHOW IMAGE:
+        imageIndex = nonRepeatingRandom(lastNumber: imageIndex, maxValue: numberOfImages)
+        awesomeImageView.image = UIImage(named: "image\(imageIndex)")
+        
+        //PLAY SOUND:
+        soundIndex = nonRepeatingRandom(lastNumber: soundIndex, maxValue: numberOfSounds)
+        let soundName = "sound\(soundIndex)"
+        playSound(soundName: soundName)
+
+    }
+    
 
     }
     
