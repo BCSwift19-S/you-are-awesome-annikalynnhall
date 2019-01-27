@@ -31,30 +31,49 @@
                                 <rect key="frame" x="38" y="190" width="338" height="630"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ltk-L8-GM4">
-                                <rect key="frame" x="119.5" y="152" width="175" height="30"/>
+                                <rect key="frame" x="294" y="152" width="104" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="175" id="Fsd-bs-ydD"/>
-                                    <constraint firstAttribute="height" constant="30" id="b5f-X0-bSo"/>
+                                    <constraint firstAttribute="height" constant="30" id="e2m-ui-eFa"/>
+                                    <constraint firstAttribute="width" constant="104" id="qac-bv-s49"/>
                                 </constraints>
                                 <state key="normal" title="Show Message"/>
                                 <connections>
                                     <action selector="showMessagePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="10F-V1-Io9"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play Sound:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dsO-zn-XCV">
+                                <rect key="frame" x="38" y="157" width="91" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Z5d-UW-xQ9"/>
+                                    <constraint firstAttribute="width" constant="91" id="o9v-lc-CWh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YFz-Sy-UzL">
+                                <rect key="frame" x="137" y="152" width="51" height="31"/>
+                                <connections>
+                                    <action selector="soundSwitchPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="Caa-6L-ShK"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="cKh-qz-ISJ" firstAttribute="top" secondItem="Ltk-L8-GM4" secondAttribute="bottom" constant="8" id="2R7-1Q-2Mk"/>
+                            <constraint firstItem="cKh-qz-ISJ" firstAttribute="top" secondItem="Ltk-L8-GM4" secondAttribute="bottom" constant="8" symbolic="YES" id="5Gg-G2-8S9"/>
+                            <constraint firstItem="dsO-zn-XCV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="38" id="7KD-eh-gdd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cKh-qz-ISJ" secondAttribute="bottom" constant="42" id="84v-5b-xyd"/>
-                            <constraint firstItem="Ltk-L8-GM4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Fe-uc-97X"/>
                             <constraint firstItem="akf-Hw-dDF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ego-bI-XY7"/>
+                            <constraint firstItem="dsO-zn-XCV" firstAttribute="top" secondItem="akf-Hw-dDF" secondAttribute="bottom" constant="13" id="IGf-8W-RRk"/>
                             <constraint firstItem="akf-Hw-dDF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="K5H-Qo-IHo"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="akf-Hw-dDF" secondAttribute="trailing" constant="16" id="Kx4-6J-u2A"/>
-                            <constraint firstItem="Ltk-L8-GM4" firstAttribute="top" secondItem="akf-Hw-dDF" secondAttribute="bottom" constant="8" id="MT9-xZ-LMI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cKh-qz-ISJ" secondAttribute="trailing" constant="38" id="MX8-Uw-H7E"/>
+                            <constraint firstItem="YFz-Sy-UzL" firstAttribute="leading" secondItem="dsO-zn-XCV" secondAttribute="trailing" constant="8" id="V4R-aZ-5wj"/>
+                            <constraint firstItem="Ltk-L8-GM4" firstAttribute="top" secondItem="akf-Hw-dDF" secondAttribute="bottom" constant="8" id="bKj-gt-fZh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cKh-qz-ISJ" secondAttribute="trailing" constant="38" id="dzI-uc-O5G"/>
+                            <constraint firstItem="YFz-Sy-UzL" firstAttribute="top" secondItem="akf-Hw-dDF" secondAttribute="bottom" constant="8" id="eJa-rT-nNx"/>
                             <constraint firstItem="cKh-qz-ISJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="38" id="iec-Re-Cro"/>
-                            <constraint firstItem="cKh-qz-ISJ" firstAttribute="top" secondItem="Ltk-L8-GM4" secondAttribute="bottom" constant="8" id="o88-ja-wR3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ltk-L8-GM4" secondAttribute="trailing" constant="16" id="jtR-OI-Rjo"/>
                             <constraint firstItem="cKh-qz-ISJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="38" id="rTP-Me-mr4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -62,6 +81,7 @@
                     <connections>
                         <outlet property="awesomeImageView" destination="cKh-qz-ISJ" id="MU6-3F-ipr"/>
                         <outlet property="messageLabel" destination="akf-Hw-dDF" id="LBg-0s-zLc"/>
+                        <outlet property="soundSwitch" destination="YFz-Sy-UzL" id="fqF-dC-2e0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
