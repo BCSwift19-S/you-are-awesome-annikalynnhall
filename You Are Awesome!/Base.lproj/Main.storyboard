@@ -18,16 +18,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akf-Hw-dDF">
-                                <rect key="frame" x="33" y="44" width="349" height="88"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akf-Hw-dDF">
+                                <rect key="frame" x="16" y="44" width="382" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="D6k-5x-bDB"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
                                 <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ltk-L8-GM4">
-                                <rect key="frame" x="155" y="140" width="104" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image0" translatesAutoresizingMaskIntoConstraints="NO" id="cKh-qz-ISJ">
+                                <rect key="frame" x="38" y="190" width="338" height="630"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ltk-L8-GM4">
+                                <rect key="frame" x="119.5" y="152" width="175" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="175" id="Fsd-bs-ydD"/>
+                                    <constraint firstAttribute="height" constant="30" id="b5f-X0-bSo"/>
+                                </constraints>
                                 <state key="normal" title="Show Message"/>
                                 <connections>
                                     <action selector="showMessagePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="10F-V1-Io9"/>
@@ -35,6 +43,20 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cKh-qz-ISJ" firstAttribute="top" secondItem="Ltk-L8-GM4" secondAttribute="bottom" constant="8" id="2R7-1Q-2Mk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cKh-qz-ISJ" secondAttribute="bottom" constant="42" id="84v-5b-xyd"/>
+                            <constraint firstItem="Ltk-L8-GM4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Fe-uc-97X"/>
+                            <constraint firstItem="akf-Hw-dDF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ego-bI-XY7"/>
+                            <constraint firstItem="akf-Hw-dDF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="K5H-Qo-IHo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="akf-Hw-dDF" secondAttribute="trailing" constant="16" id="Kx4-6J-u2A"/>
+                            <constraint firstItem="Ltk-L8-GM4" firstAttribute="top" secondItem="akf-Hw-dDF" secondAttribute="bottom" constant="8" id="MT9-xZ-LMI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cKh-qz-ISJ" secondAttribute="trailing" constant="38" id="MX8-Uw-H7E"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cKh-qz-ISJ" secondAttribute="trailing" constant="38" id="dzI-uc-O5G"/>
+                            <constraint firstItem="cKh-qz-ISJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="38" id="iec-Re-Cro"/>
+                            <constraint firstItem="cKh-qz-ISJ" firstAttribute="top" secondItem="Ltk-L8-GM4" secondAttribute="bottom" constant="8" id="o88-ja-wR3"/>
+                            <constraint firstItem="cKh-qz-ISJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="38" id="rTP-Me-mr4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
@@ -46,4 +68,7 @@
             <point key="canvasLocation" x="-39.130434782608695" y="123.88392857142857"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="image0" width="475" height="633"/>
+    </resources>
 </document>
